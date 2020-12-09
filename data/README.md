@@ -61,11 +61,11 @@ For each record it is provided:
 The dataset includes the following files:
 =========================================
 
-- 'README.txt': **Modified for the assignment**
+- 'README.txt': **Modified for the assignment**  
 
-- **'codebook.md': Shows information about the variables and summaries calculated, units, and any transformations performed to clean up the data. It also explains the steps performed to obtain the tidy set required. It is also a modified and combined version of the assumably original codebooks: features.txt, features_info.txt, activity_labels.txt**
-- **'tidydata.txt': Tidy data set generated for the assignment using 'run_analysis.R' from the following files: 'features.txt', 'activity_labels.txt', 'X_train.txt', 'y_train.txt' 'X_test.txt', 'Y_test.txt','subject_train.txt','subject_test.txt'. Details for the transformation is found in the ‘codebook.md’ file.**
-- **'run_analysis.R': R script that is required to transform the raw data to the tidy data. The steps used to clean the data are as per the course instructions and detailed explanation is provided in the ‘codebook.md’.**
+- **'codebook.md': Shows information about the variables and summaries calculated, units, and any transformations performed to clean up the data. It also explains the steps performed to obtain the tidy set required. It is also a modified and combined version of the assumably original codebooks: features.txt, features_info.txt, activity_labels.txt**  
+- **'tidydata.txt': Tidy data set generated for the assignment using 'run_analysis.R' from the following files: 'features.txt', 'activity_labels.txt', 'X_train.txt', 'y_train.txt' 'X_test.txt', 'Y_test.txt','subject_train.txt','subject_test.txt'. Details for the transformation is found in the ‘codebook.md’ file.**  
+- **'run_analysis.R': R script that is required to transform the raw data to the tidy data. The steps used to clean the data are as per the course instructions and detailed explanation is provided in the ‘codebook.md’.**  
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 
