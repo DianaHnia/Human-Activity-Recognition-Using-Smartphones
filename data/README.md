@@ -4,13 +4,13 @@
 
 **Version 2.0**
 
-**Original README.txt (version 1.0) adapted by me, this GitHub account owner, for the course project (week 4) of the JHU *Getting and Cleaning Data* offered on Coursera.**
+**Original README.txt (version 1.0) adapted by me, this GitHub account owner, for the course project (week 4) of the JHU *Getting and Cleaning Data* offered on Coursera.**   
 
-**All the changes made to the original file are in bold font.**
+**All the changes made to the original file are in bold font.**  
 **Changes were made to add the necessary information after a tidy dataset from the original files was created. The created tidy dataset along with its corresponding required files were made for submission of the course project. **
-**From the project description: ” The goal is to prepare tidy data that can be used for later analysis.” We are required to submit a tidy dataset, a README file, a codebook, and an R script.**
+**From the project description: ” The goal is to prepare tidy data that can be used for later analysis.” We are required to submit a tidy dataset, a README file, a codebook, and an R script.**  
 
-**The original dataset, that includes the original README.txt, has been downloaded from [data for the project](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) on November 30,2020 from the mentioned course. Also, a full description is available at the [site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) where the data was obtained. **
+**The original dataset, that includes the original README.txt, has been downloaded from [data for the project](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) on November 30,2020 from the mentioned course. Also, a full description is available at the [site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) where the data was obtained.**  
 
 
 ==================================================================
@@ -37,26 +37,25 @@ For each record it is provided:
 - Its activity label.
 - An identifier of the subject who carried out the experiment.
 
-# **Processed Data (for the assignment):**
+# **Processed Data (for the assignment):**  
 =====================================================================================
 
 **The data in the files was processed to create a tidy dataset according to the JHU *Getting and Cleaning Data* course project instructions.**  
-**The R script was written in the R language R version 3.5.2 using RStudio version 1.2.5019 on Windows 10.  **
-**The working directory was set and a new sub-directory called *data* was created in the working directory.  **
-**A new R script was opened in RStudio called 'run_analysis.R' as per the project requirement. *tidyverse* library was loaded.  **
-**The dataset was downloaded from the above mentioned link *data for the project* **
-**using *download.file* function. Then the downloaded file was unzipped manually (right click and *extract here*), and files were inspected to get familiar with the topic and data..  **
-**The *test* and *train* datasets were then loaded into R using the *read.table* funtion. Two new tables were created: *x_test* and *x_train* by combining the loaded (*x_test, y_test, subject_test*) and (*x_train, y_train, subject_train*) respectively using column bind, *cbind* function. Those combined training and test sets were then merged to create one data set called *data* using the row bind *rbind* function.**  
+**The R script was written in the R language R version 3.5.2 using RStudio version 1.2.5019 on Windows 10.**  
+**The working directory was set and a new sub-directory called *data* was created in the working directory.**  
+**A new R script was opened in RStudio called 'run_analysis.R' as per the project requirement. *tidyverse* library was loaded.**  
+**The dataset was downloaded from the above mentioned link *data for the project* using *download.file* function. Then the downloaded file was unzipped manually (right click and *extract here*), and files were inspected to get familiar with the topic and data..**  
+**The *test* and *train* datasets were then loaded into R using the *read.table* funtion. Two new tables were created: *x_test* and *x_train* by combining the loaded (*x_test, y_test, subject_test*) and (*x_train, y_train, subject_train*) respectively using column bind, *cbind* function. Those combined training and test sets were then merged to create one data set called *data* using the row bind *rbind* function.**   
 
-***data* was then subset to include only the measurements on the mean and standard** **deviation for each measurement. This was done by loading the *feature.txt* into R, and extracting only the features that include *mean* or *std* in its name using the *grpl***
-**function and then using the subsetted features vector to subset *data*.**  
+**The created *data* was then subset to include only the measurements on the mean and standard deviation for each measurement. This was done by loading the *feature.txt* into R, and extracting only the features that include *mean* or *std* in its name using the *grpl* function and then using the subsetted features vector to subset *data*.**  
+ 
+**Later, the activity column (*y_test, y_train*) that were combined previously in *data* has values from 1 to 6. Those numbers were replaced by their corresponding character description by loading and extracting the information from *activity_labels.txt*.**  
 
-**Later, the activity column (*y_test, y_train*) that were combined previously in *data* has values from 1 to 6. Those numbers were replaced by their corresponding character description by loading and extracting the information from *activity_labels.txt*.  **
+**The *data* variables were then renamed using this format scheme: AxisSignalEstimation-Domain, where Axis refers to axis, Signal refers to signals measured, Estimation refers to estimated value (ex:mean), and Domain refers to time or frequency domain (Ex:XBodyGyroMean-Fdomain)**  
 
-***data* variables were then renamed using this format scheme: AxisSignalEstimation-Domain, where Axis refers to axis, Signal refers to signals measured, Estimation refers to estimated value (ex:mean), and Domain refers to time or frequency domain (Ex:XBodyGyroMean-Fdomain)  **
+**Finally, another independent tidy data *tidy_data* set was created from the previous one with the average of each variable for each activity and each subject using *group_by* and *summarise_all* and *mean* functions. Variable names were then renamed by replacing "-" with "Avrg" from *data* names, and *tidy_data* was saved to a text file in the *data* sub-directory using *write.table* function.**  
 
-**Finally, another independent tidy data *tidy_data* set was created from the previous one with the average of each variable for each activity and each subject using *group_by* and *summarise_all* and *mean* functions. Variable names were then renamed by replacing "-" with "Avrg" from *data* names, and *tidy_data* was saved to a text file in the *data* sub-directory using *write.table* function. **
-**For more details, please refer to the 'run_analysis.R' script that contains the code with explanatory comments. Also refer to the 'codebook.md' for explanation of the variable names.  **
+**For more details, please refer to the 'run_analysis.R' script that contains the code with explanatory comments. Also refer to the 'codebook.md' for explanation of the variable names.**  
   
 
 The dataset includes the following files:
