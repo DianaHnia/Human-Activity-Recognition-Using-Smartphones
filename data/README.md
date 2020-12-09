@@ -7,7 +7,7 @@
 **Original README.txt (version 1.0) adapted by me, this GitHub account owner, for the course project (week 4) of the JHU *Getting and Cleaning Data* offered on Coursera.**   
 
 **All the changes made to the original file are in bold font.**  
-**Changes were made to add the necessary information after a tidy dataset from the original files was created. The created tidy dataset along with its corresponding required files were made for submission of the course project. **
+**Changes were made to add the necessary information after a tidy dataset from the original files was created. The created tidy dataset along with its corresponding required files were made for submission of the course project.**  
 **From the project description: ” The goal is to prepare tidy data that can be used for later analysis.” We are required to submit a tidy dataset, a README file, a codebook, and an R script.**  
 
 **The original dataset, that includes the original README.txt, has been downloaded from [data for the project](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) on November 30,2020 from the mentioned course. Also, a full description is available at the [site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) where the data was obtained.**  
